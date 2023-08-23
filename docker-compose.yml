@@ -13,9 +13,5 @@ services:
     build: .
     ports:
       - "9000:8080"
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db/ttt
-      SPRING_DATASOURCE_USERNAME: ttt
-      SPRING_DATASOURCE_PASSWORD: ttt
     depends_on:
       - db
