@@ -12,6 +12,7 @@
     <artifactId>volunteer-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>VolunteerService</name>
+    <packaging>jar</packaging>
     <description>VolunteerService for retrieving volunteers and relevant jobs</description>
     <properties>
         <java.version>11</java.version>
@@ -100,6 +101,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+            </plugin>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.7</version>
+                <configuration>
+                    <appName>DecisionManagementService</appName>
+                    <jdkVersion>11.0</jdkVersion>
+                </configuration>
             </plugin>
         </plugins>
     </build>
