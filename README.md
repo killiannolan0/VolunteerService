@@ -26,15 +26,15 @@ Alternatively you can use the Spring Boot Maven plugin like so:
 ```mvn spring-boot:run```
 
 # Running the Docker container
-
+Docker Engine needs to be started locally in order to run containers.
 The application is docker containerized along with a postgres DB image pulled from the docker public repo, as outlined
 in the Dockerfile and docker-compose.yml.
 
 Package the application
-```mvnw clean package```
+```mvn clean package```
 
 Docker compose build and run
-```docker-compose build && docker-compose up```
+```docker compose build && docker compose up```
 
 Application will be running on http://localhost:9000/.
 
@@ -62,6 +62,8 @@ The tabs on the provided excel sheet should be saved individually as CSV files a
 endpoints.</br>
 The heroku application has this data already loaded in. The local docker instance will need this data to be imported.
 
-
+# Observations/Improvements
+1) The primary key for job/volunteer entities does not auto-incremement and is not auto generated, for the purpose of this assignment this needs to be set when creating as all the information is on the excel file with ID's already set. If we set auto generate here, then we would need to change the jobs-volunteers tab with updated id's.
+2) Importing the entire excel book would be a key improvement rather than splitting into CSV files. With more time this is something I would add.
 
 
