@@ -38,7 +38,7 @@ Application will be running on http://localhost:9000/.
 # Deployment
 
 Application has been deployed to Heroku at:
-```[https://clinicmanagementservice-41334374ff3d.herokuapp.com/](https://volunteer-service-9d0da4f8254d.herokuapp.com/)```
+```https://volunteer-service-9d0da4f8254d.herokuapp.com/```
 
 # Documentation
 
