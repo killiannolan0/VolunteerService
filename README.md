@@ -47,7 +47,7 @@ Application has been deployed to Heroku at:
 
 Swagger doc is available at;</br>
 
-- ```http://localhost:900/swagger-ui.html``` (When docker container is running) </br>
+- ```http://localhost:9000/swagger-ui.html``` (When docker container is running) </br>
 - ```https:/volunteer-service-9d0da4f8254d.herokuapp.com/swagger-ui.html```
 
 # Data
