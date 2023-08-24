@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -31,7 +32,7 @@ public class ImportServiceImpl implements ImportService {
     private JobRepository jobRepository;
     private VolunteerRepository volunteerRepository;
 
-
+    @Transactional
     public List<JobEntity> importJobsByCsv(MultipartFile file) throws IOException {
         logger.info("Importing jobs from submitted CSV file");
         final CSVParser parser = getCsvRecords(file, CSVFormat.EXCEL.withHeader());
@@ -54,6 +55,7 @@ public class ImportServiceImpl implements ImportService {
         }
     }
 
+    @Transactional
     public List<VolunteerEntity> importVolunteersByCsv(MultipartFile file) throws IOException {
         logger.info("Importing volunteers from submitted CSV file");
         final CSVParser parser = getCsvRecords(file, CSVFormat.DEFAULT.withHeader().withIgnoreEmptyLines(true).withTrim());
