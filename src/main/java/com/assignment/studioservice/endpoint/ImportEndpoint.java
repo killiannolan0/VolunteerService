@@ -38,6 +38,6 @@ public class ImportEndpoint {
     @ApiOperation(value = "Provides functionality for importing jobs-volunteers relationships via a CSV file.")
     public ResponseEntity<Object> importJobVolunteersByCsv(@RequestParam("file") MultipartFile file) throws IOException {
         service.importJobsVolunteersCSV(file);
-        return ResponseEntity.ok().body(null);
+        return ResponseEntity.ok().body("Success");
     }
 }
