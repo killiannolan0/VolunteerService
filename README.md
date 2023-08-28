@@ -63,6 +63,8 @@ endpoints.</br>
 The heroku application has this data already loaded in. The local docker instance will need this data to be imported.
 
 # Observations/Improvements
+These are some observations and improvements I have noted, as time was a constraint here this is what I would add to the project with more time.
+
 1) The primary key for job/volunteer entities does not auto-incremement and is not auto generated, for the purpose of this assignment this needs to be set when creating as all the information is on the excel file with ID's already set. If we set auto generate here, then we would need to update the jobs-volunteers csv tab with updated id's.
 2) Importing the entire excel book would be a key improvement rather than splitting into CSV files. With more time this is something I would add.
 3) There is more edge cases and file testing we can do for the import service. As time was a constraint, this is an improvement I would make.
